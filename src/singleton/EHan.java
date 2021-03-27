@@ -3,7 +3,7 @@ package singleton;
 public class EHan {
     public static EHan eHan = new EHan();
 
-    public EHan(){}
+    private EHan(){}
 
     public static EHan getInstance(){
         return eHan;

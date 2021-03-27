@@ -3,7 +3,7 @@ package singleton;
 public class LHan {
     public static LHan lHan = null;
 
-    public  LHan(){};
+    private LHan(){};
 
     public LHan getInstance(){
         if(lHan == null){

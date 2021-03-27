@@ -3,6 +3,8 @@ package singleton;
 public class DoubleCheck {
     public static volatile DoubleCheck doubleCheck = null;
 
+    private DoubleCheck(){}
+
     public static DoubleCheck getInstance(){
         if(doubleCheck == null){
             synchronized (DoubleCheck.class){
