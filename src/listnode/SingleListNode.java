@@ -1,4 +1,8 @@
 package listnode;
+
+import java.util.HashSet;
+import java.util.Set;
+
 //打牢基础，链表-20210327
 public class SingleListNode {
 
@@ -192,6 +196,28 @@ public class SingleListNode {
             this.head = cur;
         }
     }
+
+    /**
+     * 判断是否有环-leetcode
+     * @param head
+     * @return
+     */
+    public boolean hasCycle(ListNode head) {
+        Set<ListNode> set = new HashSet<>();
+        //使用set
+        if(head == null){
+            return false;
+        }
+        while(head != null){
+            if(!set.add(head)){
+                return true;
+            }else{
+                head = head.next;
+            }
+        }
+        return false;
+    }
+
 
     /**
      * 测试
