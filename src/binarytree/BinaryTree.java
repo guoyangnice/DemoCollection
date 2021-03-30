@@ -140,9 +140,9 @@ public class BinaryTree {
      */
     public void inOrder(BinaryTreeNode root){
         if(root != null){
-            preOrder(root.getLeftChild());
+            inOrder(root.getLeftChild());
             System.out.println(root.getData());
-            preOrder(root.getRightChild());
+            inOrder(root.getRightChild());
         }
     }
 
@@ -152,8 +152,8 @@ public class BinaryTree {
      */
     public void postOrder(BinaryTreeNode root){
         if(root != null){
-            preOrder(root.getLeftChild());
-            preOrder(root.getRightChild());
+            postOrder(root.getLeftChild());
+            postOrder(root.getRightChild());
             System.out.println(root.getData());
         }
     }
