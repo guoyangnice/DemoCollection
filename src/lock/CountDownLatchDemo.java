@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 从这个例子可以看出，countDownLatch对于主线程是await子线程执行完后再执行
+ *
  */
 public class CountDownLatchDemo {
     public static void main(String[] args) throws InterruptedException {
