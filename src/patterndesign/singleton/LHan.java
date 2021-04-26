@@ -1,4 +1,4 @@
-package singleton;
+package patterndesign.singleton;
 //懒汉模式-只有使用的时候再实例化
 public class LHan {
     public static LHan lHan = null;
