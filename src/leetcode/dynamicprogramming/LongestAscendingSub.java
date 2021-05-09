@@ -2,7 +2,7 @@ package leetcode.dynamicprogramming;
 
 /**
  * 题目：给定一个无序的整数数组，找到其中最长上升子序列的长度。
- *
+ * 动态规划-线性关系中的分析方法
  * @author yangjie
  */
 public class LongestAscendingSub {
