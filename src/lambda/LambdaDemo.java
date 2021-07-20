@@ -20,6 +20,7 @@ public class LambdaDemo {
         lambdaDemo.useMap();
         lambdaDemo.userFilter();
         lambdaDemo.useLimit();
+        lambdaDemo.useStatics();
     }
 
     private static void getArrayListResult() {
@@ -117,7 +118,21 @@ public class LambdaDemo {
         random.ints().limit(10).forEach(System.out::println);
     }
 
+    /**
+     * 统计结果收集器
+     */
+    public void useStatics(){
+        List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
 
+        IntSummaryStatistics stats = numbers.stream()
+                .mapToInt(x -> x)
+                .summaryStatistics();
+
+        System.out.println("列表中最大的数：" + stats.getMax());
+        System.out.println("列表中最小的数 : " + stats.getMin());
+        System.out.println("所有数之和 : " + stats.getSum());
+        System.out.println("平均数 : " + stats.getAverage());
+    }
 }
 
 @Data
